@@ -203,6 +203,14 @@ const statueMaterial = new THREE.MeshToonMaterial({
   shininess: 100
 });
 
+const treeMaterial = new THREE.MeshStandardMaterial({
+  color: 0x7cbf6a,
+  roughness: 0.9,
+  metalness: 0.05,
+  emissive: 0x102a1a,
+  emissiveIntensity: 0.2,
+  side: THREE.DoubleSide
+});
 
 // ---------------------------------------------------
 // Row 1
@@ -326,7 +334,7 @@ const tree =
             3,
             6
         ),
-        greenMaterial
+        treeMaterial
     );
 
 placeOnPedestal(tree, 9, 5);
