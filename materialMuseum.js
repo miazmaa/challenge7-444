@@ -61,12 +61,22 @@ pointLight.castShadow = true;
 
 scene.add(pointLight);
 
-const helper = new THREE.PointLightHelper(
-    pointLight,
-    0.5
+const goldSpotLight = new THREE.SpotLight(
+    0xfff2a8,
+    1200,
+    8,
+    Math.PI / 20,
+    0.05,
+    2
 );
 
-scene.add(helper);
+goldSpotLight.position.set(-9, 8, -2);
+goldSpotLight.castShadow = true;
+goldSpotLight.shadow.mapSize.set(1024, 1024);
+goldSpotLight.lookAt(-9, 2, -4);
+
+scene.add(goldSpotLight);
+
 
 // ---------------------------------------------------
 // Floor
@@ -223,6 +233,12 @@ const knotMaterial = new THREE.MeshPhysicalMaterial({
     clearcoatRoughness: 0.1,
   
 });
+
+const spotLight = new THREE.SpotLight(0xfff2a8, 250, 30, Math.PI / 6, 0.4, 1);
+spotLight.position.set(-9, 8, -4);
+spotLight.castShadow = true;
+scene.add(spotLight);
+
 // ---------------------------------------------------
 // Row 1
 // ---------------------------------------------------
