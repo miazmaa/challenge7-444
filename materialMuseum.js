@@ -175,6 +175,16 @@ const blueMaterial =
         color: 0x4169e1
     });
 
+const goldMaterial = new THREE.MeshStandardMaterial({
+  color: 0xffd700,
+  roughness: 0.4,
+  metalness: 0.8,
+  bumpScale: 0.05,
+  transparent: true,
+  opacity: 0.9,
+  side: THREE.DoubleSide
+});
+
 // ---------------------------------------------------
 // Row 1
 // ---------------------------------------------------
@@ -184,7 +194,7 @@ createPedestal(-9, -4);
 const sphere =
     new THREE.Mesh(
         new THREE.SphereGeometry(1, 32, 32),
-        redMaterial
+        goldMaterial
     );
 
 placeOnPedestal(sphere, -9, -4);
