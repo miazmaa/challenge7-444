@@ -1,0 +1,15 @@
+1.	It currently uses basic material
+2.	The basic material is cartoonish and doesn’t interact with light, it just has a color. Since they all use the same material the objects look similar just with their own colors and shapes
+3.	It appears 11 times so far counting the floor material
+4.	Gold sphere
+5.	Gold sphere or the plastic cube
+6.	The statue
+7.	The tree
+8.	Yes the light hits multiple objects
+9.	Yes
+
+Reflection Material:
+1.	The physical material or the standard material
+2.	Toon material
+3.	Phong material or physical material depending on how cartoonish/realistic the robot should look
+4.	Added brightness and shadows to the museum
