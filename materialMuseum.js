@@ -212,6 +212,17 @@ const treeMaterial = new THREE.MeshStandardMaterial({
   side: THREE.DoubleSide
 });
 
+const knotMaterial = new THREE.MeshPhysicalMaterial({
+    color: 0x9b59b6,
+    metalness: 0.7,
+    roughness: 0.3,
+    transmission: 1.0,
+    ior: 1.0,
+    thickness: 2.0,
+    clearcoat: 1.0,
+    clearcoatRoughness: 0.1,
+  
+});
 // ---------------------------------------------------
 // Row 1
 // ---------------------------------------------------
@@ -316,7 +327,7 @@ const normalObject =
             100,
             16
         ),
-        purpleMaterial
+        knotMaterial
     );
 
 placeOnPedestal(normalObject, 3, 5);
