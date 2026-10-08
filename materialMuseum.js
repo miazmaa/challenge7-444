@@ -185,6 +185,14 @@ const goldMaterial = new THREE.MeshStandardMaterial({
   side: THREE.DoubleSide
 });
 
+const plasticMaterial = new THREE.MeshPhongMaterial({
+    color: 0x00ffff,
+    emissive: 0x072534,
+    specular: 0x555555, 
+    shininess: 300,
+    flatShading: true
+});
+
 // ---------------------------------------------------
 // Row 1
 // ---------------------------------------------------
@@ -207,7 +215,7 @@ createPedestal(-3, -4);
 const cube =
     new THREE.Mesh(
         new THREE.BoxGeometry(2,2,2),
-        cyanMaterial
+        plasticMaterial
     );
 
 placeOnPedestal(cube, -3, -4);
