@@ -193,6 +193,17 @@ const plasticMaterial = new THREE.MeshPhongMaterial({
     flatShading: true
 });
 
+const statueMaterial = new THREE.MeshToonMaterial({
+  color: 0xff4fd8,
+  bumpScale: 0.05,
+  wireframe: false,
+  transparent: false,
+  emissive: 0x072534,
+  specular: 0x555555,
+  shininess: 100
+});
+
+
 // ---------------------------------------------------
 // Row 1
 // ---------------------------------------------------
@@ -241,7 +252,7 @@ createPedestal(9, -4);
 const statue =
     new THREE.Mesh(
         new THREE.ConeGeometry(1,3,32),
-        magentaMaterial
+        statueMaterial
     );
 
 placeOnPedestal(statue, 9, -4);
